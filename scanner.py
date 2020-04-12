@@ -1,9 +1,13 @@
 import re
 import string
+import os
 
-Names = ['input.txt', '2.txt','3.txt']
+Names = []
 path = 'input/'
 
+for i in os.listdir(path):
+    Names.append(i)
+    
 ignorepath = 'ignore.txt'
 ignoreFile = open(ignorepath,'r')
 ignore = ignoreFile.read().split('\n')
